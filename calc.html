@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+
+    <!-- Link to an external CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Savings Calculator</h1>
+        <h3>Calculate how much you can potentially save on your cloud costs</h3>
+        <div class="container">
+            <div class="left">
+                <div class="cloudProvider">
+                    <p>Select Cloud Provider :</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="cloudProvider" value="aws" checked>
+                            <img src="./assets/aws-svgrepo-com.svg" alt="Option 1">
+                        </label>
+
+                        <label>
+                            <input type="radio" name="cloudProvider" value="azure">
+                            <img src="./assets/azure-svgrepo-com.svg" alt="Option 2">
+                        </label>
+                        <label>
+                            <input type="radio" name="cloudProvider" value="gcp">
+                            <img src="./assets/google-cloud-svgrepo-com.svg" alt="Option 3">
+                        </label>
+                    </div>
+
+                </div>
+                <div class="price-row">
+                    <p>Monthly EC2 Spend ?</p>
+                    <input type="number" placeholder="$ 52000" name="EC2" />
+                </div>
+                <div class="price-row">
+                    <p>What percent of that spend is using containers / ASGs / LGs ?</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" name="percent_using">
+                    <p class="result">50%</p>
+                </div>
+                <div class="price-row">
+                    <p>Monthly EBS spend ?</p>
+                    <input type="number" placeholder="$ 334000" name="EBS" />
+                </div>
+                <div class="price-row">
+                    <p>Monthly RDS spend ?</p>
+                    <input type="number" placeholder="$ 334000" name="RDS" />
+                </div>
+                <div class="price-row">
+                    <p>What percent of all that spend is covered by RIs / saving plans ?</p>
+                    <input type="range" min="1" max="100" value="50" class="slider" name="RIs_SavingPlans">
+                    <p class="result">50%</p>
+                </div>
+                <div class="price-row">
+                    <p>What percent of all that spend is non-production ?</p>
+                    <input type="range" min="0" max="100" value="50" class="slider" name="non-production">
+                    <p class="result">50%</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="circle-wrap">
+                    <div class="circle">
+                        <div class="mask half">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="mask full">
+                            <div class="fill"></div>
+                        </div>
+                    </div>
+                    <div class="inside-circle">
+
+                        <h3>Potential Monthly Saving</h3>
+                        <h1>$ 39,000</h1>
+                        <div>
+                            <button class="get-started-btn btn">Get Started</button>
+                            <button class="book-demo-btn btn">Book a Demo</button>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div>
+
+    </div>
+    <!-- Link to an external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
